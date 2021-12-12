@@ -24,6 +24,18 @@ h1 {
   font-size: 2rem;
 }
 
+
+.card-mix{
+margin-left: 40px;
+  background: aqua;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+
+
+
+
 .cart-badge {
   position: absolute;
   top: -8px;
