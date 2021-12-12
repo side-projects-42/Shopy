@@ -1,5 +1,10 @@
 import React, { Component } from "react";
 import axios from "axios";
+import { Rate } from 'antd';
+//import { FaTruckMoving} from "react-icons/ai";
+
+import { FaTruckMoving} from 'react-icons/fa';
+
 
 export default class PlantList extends Component {
   // add state with a property called "plants" - initialize as an empty array
@@ -31,14 +36,13 @@ export default class PlantList extends Component {
                 <p>{plant.description}</p>
                 <div className="plant-bottom-row">
                   <p>${plant.price}</p>
-                  <p>☀️ {plant.light}</p>
-                  <p>💦 {plant.watering}x/month</p>
-
+                  <Rate allowHalf defaultValue={4.5} className="rate" />
+                  <FaTruckMoving/>
+              
                   <button
                   className="plant-button"
                   onClick={() => this.props.addToCart(plant)}
-                >
-                  Add to cart
+                >Buy
                 </button>
 
                 </div>

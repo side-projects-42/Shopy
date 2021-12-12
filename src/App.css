@@ -1,9 +1,36 @@
 body {
-  background: #0e101c;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
+  background: black;
+  color: white;
+  text-transform: uppercase;
+  border: none;
+  font-size: 16px;
+  font-weight: 100;
 }
+
+
+body::before{
+  content:"";
+  position: absolute;
+  top:0;
+  width:100%;
+  height: 100%;
+  background: linear-gradient(#f00, rgba(255, 0, 255, 0.075));
+  clip-path: circle(30% at right 70%)
+}
+
+body::after
+{
+  content:"";
+  position: absolute;
+  top:0;
+  left:0;
+  width: 100%;
+  height:100%;
+  background: linear-gradient(#2196f3, #e91e6227);
+  clip-path: circle(20% at 10% 100%)
+}
+
+
 
 .container {
   max-width: 800px;
@@ -25,12 +52,21 @@ h1 {
   margin-left: 40px;
   margin-right: 40px;
   background: rgba(255, 255, 255, 0.178);
+
+  box-shadow: 0px 0px 15px -5px;
+  transition: 0.3%;
+  animation: ease-in-out;
+  transition: 0.5s;
+  animation: ease-in-out;
+
   backdrop-filter: blur(2px);
-  border-radius: 40px;
+  border-radius: 20px;
+
+
   display: flex;
   justify-content: space-evenly;
-  height: 520px;
-  width:382px;
+  height: 500px;
+  width: 398px;
 }
 
 .cart-badge {
@@ -43,7 +79,7 @@ h1 {
   display: inline-block;
   padding-left: 6px;
   padding-right: 6px;
-  font-size: 0.6rem;
+  font-size: 0.9rem;
   text-align: center;
 }
 
@@ -53,26 +89,30 @@ h1 {
   margin: 0 auto;
   display: flex;
   flex-flow: row wrap;
-  justify-content: space-evenly;
+  position: relative;
+  justify-content: center;
+  align-items: center;
 }
 
 .plant-card {
   display: flex;
   width: 50%;
-  padding: 32px 0;
+margin-top: 20px;
+  justify-content: row;
+  align-items: center;
+  position:relative;
 }
 
 .plant-image {
-  height: 250px;
-  width:382px;
-margin-right: 5px;
-border-top-left-radius: 20px;
-border-top-right-radius: 20px;
- 
+  height: 260px;
+  width: 399px;
+  margin-right: 0.5px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
 }
 
 .plant-details {
-  padding: 0 70px 0 76px;
+  padding: 0 70px 0 70px;
   color: #fff;
   font-weight: 200;
   display: flex;
@@ -83,7 +123,7 @@ border-top-right-radius: 20px;
 
 .plant-name {
   margin-top: 0;
-  margin-bottom: 6px;
+  margin-bottom: 16px;
 }
 
 .plant-scientific-name {
@@ -92,16 +132,20 @@ border-top-right-radius: 20px;
 
 .plant-bottom-row {
   display: flex;
-  margin-top: 16px;
+  margin-top: 6px;
+  margin-right: 20px;
   align-items: center;
 }
 
 .plant-bottom-row > p {
-  margin-right: 32px;
+  margin-right: 30px;
+  margin-bottom: 20px;
+  margin-left: 18px;
 }
 
 .plant-button {
   justify-self: flex-end;
+  justify-content: space-around;
 }
 
 p {
@@ -172,14 +216,25 @@ label {
 }
 
 button {
-  background: #ec5990;
-  color: white;
+  background: rgba(255, 255, 255, 0.178);
+  border-color: beige;
+  box-shadow: 0px 0px 15px -5px;
+  transition: 0.3%;
+  animation: ease-in-out;
+  transition: 0.5s;
+  animation: ease-in-out;
+ backdrop-filter: blur(2px);
+
+  border: 30px;
+border-radius: 10px;
+width:80px;
+height: 40px;
   text-transform: uppercase;
   border: none;
-  margin-top: 40px;
-  padding: 20px;
+  margin-top: 10px;
+  padding: 11px;
   font-size: 16px;
-  font-weight: 100;
+  font-weight: 10;
   cursor: pointer;
 }
 
@@ -216,21 +271,12 @@ input {
 }
 
 hr {
-  margin-top: 30px;
+  margin-top: 20px;
 }
 
 h2 {
   color: white;
   font-weight: 200;
-}
-
-button {
-  display: block;
-  margin-top: 16px;
-  border: 1px solid #333;
-  text-transform: uppercase;
-  padding: 10px 20px;
-  border-radius: 4px;
 }
 
 pre {
@@ -247,9 +293,9 @@ pre {
 }
 
 .steps a {
-  color: #0e101c;
+  color: #7e8de2;
   text-decoration: none;
-  font-size: 14px;
+  font-size: 3px;
   line-height: 2;
 }
 
@@ -494,6 +540,7 @@ button {
 /* button:hover {
     background: #df2e6c;
   } */
+
 button:active,
 input[type="button"]:active,
 input:active {
@@ -532,15 +579,6 @@ hr {
 h2 {
   color: white;
   font-weight: 200;
-}
-
-button {
-  display: block;
-  margin-top: 16px;
-  border: 1px solid #333;
-  text-transform: uppercase;
-  padding: 10px 20px;
-  border-radius: 4px;
 }
 
 pre {
@@ -625,119 +663,9 @@ pre {
   animation-fill-mode: backwards;
 }
 
-@-webkit-keyframes moveInBottom {
-  0% {
-    opacity: 0;
-    -webkit-transform: translateY(30px);
-    transform: translateY(30px);
-  }
-  100% {
-    opacity: 1;
-    -webkit-transform: translateY(0px);
-    transform: translateY(0px);
-  }
-}
 
-@keyframes moveInBottom {
-  0% {
-    opacity: 0;
-    -webkit-transform: translateY(30px);
-    transform: translateY(30px);
-  }
-  100% {
-    opacity: 1;
-    -webkit-transform: translateY(0px);
-    transform: translateY(0px);
-  }
-}
 
-.steps li:last-child {
-  border: none;
-}
 
-.active {
-  color: #0e101c;
-  border-bottom: 2px solid !important;
+.rate{
+background-color: blue;
 }
-
-.h-100 {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  background: #fff;
-  height: 35vh;
-  width: 45vh;
-  -webkit-box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.8);
-  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.8);
-}
-
-.images {
-  height: 20px;
-  width: 20x;
-  -webkit-box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.8);
-  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.8);
-}
-
-.d-flex {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: column;
-  -ms-flex-pack: column;
-  justify-content: column;
-}
-
-.card-container {
-  width: 100px;
-  height: 250px;
-  overflow: hidden;
-  background: rgba(255, 255, 255, 0.5);
-  color: white;
-  text-transform: uppercase;
-  border: none;
-  font-size: 16px;
-  font-weight: 100;
-  backdrop-filter: blur(1px);
-  -webkit-box-shadow: 0px 0px 15px -5px;
-  box-shadow: 0px 0px 15px -5px;
-  -webkit-transition: 0.3%;
-  transition: 0.3%;
-  -webkit-animation: ease-in-out;
-  animation: ease-in-out;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
-  animation: ease-in-out;
-  border-radius: 10px;
-  -webkit-box-shadow: 2px 2px 3px 0px #000000;
-  box-shadow: 2px 2px 3px 0px #000000;
-
-  display: flex;
-  justify-content: row;
-}
-
-.card-container:hover {
-  -webkit-transform: scale(1.1);
-  transform: scale(1.1);
-  -webkit-box-shadow: 0px 0px 15px 0px;
-  box-shadow: 0px 0px 15px 0px;
-}
-
-.image-container {
-  overflow: hidden;
-  height: 200px;
-  width: 300px;
-}
-
-.font-weight-bold {
-  font-size: large;
-}
-
-/* Contract Forms*/
-.container-form {
-  margin-top: 60px;
-  color: #81d4fa;
-}
-/*# sourceMappingURL=app.css.map */
