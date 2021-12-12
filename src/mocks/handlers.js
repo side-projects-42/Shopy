@@ -12,7 +12,7 @@ const plantsData = [
     sizes: ["small"],
     watering: 2,
     description:
-      "Rosalia is a stunner with glossy green leaves accompanied by bright red undersides. Her oval shaped leaves are deeply grooved, adding depth to her figure. Flower spikes will appear with bright light, adding even more character to this absolute beaut.",
+      "Rosalia is a stunner with glossy green leaves accompanied by bright red undersides.",
     price: 21,
   },
   {
@@ -26,7 +26,7 @@ const plantsData = [
     sizes: ["small"],
     watering: 2,
     description:
-      "Flipper's trailing stems are full of glossy succulent leaves, reminiscent to a pod of breaching dolphins. Flipper hails from South Africa, so he thrives in warm environments with lots of sun. This dolphin doesn't need too much water to thrive, making him low maintenance and easy to love.",
+      "Flipper's trailing stems are full of glossy succulent leaves, reminiscent to a pod of breaching dolphins.",
     price: 15,
   },
   {
@@ -40,7 +40,7 @@ const plantsData = [
     sizes: ["small", "medium"],
     watering: 2,
     description:
-      "One of the most popular and hardy of houseplants, he's virtually indestructible and adaptable to almost any condition. Whether you throw full, direct sunlight at him or shove him in the low-light corner of your apartment, he'll grow. And to top it off, he'll go weeks without water if he must.",
+      "One of the most popular and hardy of houseplants, he's virtually indestructible and adaptable to almost any condition.",
     price: 18,
   },
   {
@@ -54,7 +54,7 @@ const plantsData = [
     sizes: ["small", "medium"],
     watering: 2,
     description:
-      "He's able to go without water for weeks on end and can survive in almost any light condition. As wildly successful as he is, he stays true to his roots and can often be seen basking in the streets of Brooklyn reminiscing about the good ole' days over at Plant-A-Fella Records.",
+      "He's able to go without water for weeks on end and can survive in almost any light condition.",
     price: 18,
   },
   {
@@ -68,7 +68,7 @@ const plantsData = [
     sizes: ["small"],
     watering: 2,
     description:
-      "Originally from South Africa, Jade loves sun-drenched beaches, the occasional surf, and sandy soils. Too much water too often doesn't sit well with her, so maybe offer her a beer? (Please don't give your plants beer).",
+      "Originally from South Africa, Jade loves sun-drenched beaches, the occasional surf, and sandy soils. ",
     price: 15,
   },
   {
@@ -82,7 +82,7 @@ const plantsData = [
     sizes: ["small"],
     watering: 4,
     description:
-      "Fortuna is a beautiful, resilient fern with furry rhizomes that resemble that of a rabbit’s foot. If luck hasn't been on your side when raising plants, Fortuna may be the one to finally break that streak.",
+      "Fortuna is a beautiful, resilient fern with furry rhizomes that resemble that of a rabbit’s foot. ",
     price: 22,
   },
   {
@@ -96,7 +96,7 @@ const plantsData = [
     sizes: ["small", "medium"],
     watering: 6,
     description:
-      "Don't let the 'peace' part fool you—she's here to grab your attention by the horns with her lush leaves, pearly white blooms, and air filtering prowess. She might need more attention than others, but like they say, nothing good comes easy.",
+      "Don't let the 'peace' part fool you—she's here to grab your attention by the horns with her lush leaves",
     price: 26,
   },
   {
@@ -110,7 +110,7 @@ const plantsData = [
     sizes: ["small"],
     watering: 2,
     description:
-      "Originally from South Africa, Jade loves sun-drenched beaches, the occasional surf, and sandy soils. Too much water too often doesn't sit well with her, so maybe offer her a beer? (Please don't give your plants beer).",
+      "Originally from South Africa, Jade loves sun-drenched beaches, the occasional surf, and sandy soils.",
     price: 15,
   },
 ];
