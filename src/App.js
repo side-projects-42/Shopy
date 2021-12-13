@@ -33,8 +33,8 @@ function App() {
         <nav className="container">
           <div class="text-box">
             <NavLink exact to="/">
-              <a href="/" class="btn btn-white btn-animate">
-                click me
+              <a href="/" class="btn ">
+                click
               </a>
             </NavLink>
           </div>
@@ -42,7 +42,7 @@ function App() {
           <div class="text-box">
             <NavLink to="/cart">
            
-              <a href="/cart" class="btn btn-white btn-animate">
+              <a href="/cart" class="btn ">
                 Cart
                 <h3 data-testid="cart-badge2" className="cart-badge">
                 <FaCartPlus className="fa-button-carts "/>

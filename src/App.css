@@ -1,3 +1,6 @@
+
+
+
 body {
   background: black;
   color: white;
@@ -5,9 +8,15 @@ body {
   border: none;
   font-size: 16px;
   font-weight: 100;
+align-items: center;
+
+
+  
 }
 
 body::before {
+background-size: cover;
+
   content: "";
   position: absolute;
   top: 0;
@@ -51,11 +60,11 @@ h1 {
 
   box-shadow: 0px 0px 15px -5px;
   transition: 0.3%;
-  animation: ease-in-out;
+
   transition: 0.5s;
   animation: ease-in-out;
-  border-top: 1px solid rgba(255, 255, 255, 0.178);
-  border-left: 1px solid rgba(255, 255, 255, 0.178);
+  border-top: 3px solid rgba(255, 255, 255, 0.178);
+  border-left: 3px solid rgba(255, 255, 255, 0.178);
   backdrop-filter: blur(2px);
   border-radius: 20px;
 
@@ -70,7 +79,11 @@ h1 {
   top: -8px;
   right: -8px;
   border-radius: 50%;
-  background-color: #ec5990;
+  backdrop-filter: blur(2px);
+  background: rgba(248, 11, 149, 0.753);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+  border-top: 1px solid rgba(255,255,255, 0.1 );
+  border-top: 1px solid rgba(255,255,255, 0.1 );
   color: #fff;
   display: inline-block;
   padding-left: 6px;
@@ -103,8 +116,8 @@ h1 {
 
 .plant-list .plant-card .card-mix{
 
-  transform:translateY(100px);
-transition:0.5s
+  transform:translateY(10px);
+transition:0.15s
 }
 
 .plant-list .plant-card {
@@ -112,8 +125,10 @@ transition:0.5s
 }
 
 
+
+
 .plant-list .plant-card .card-mix p{
-  transform:translateY(100px);
+  transform:translateY(10px);
 transition:0.5s;
 opacity: 0;
 
@@ -126,7 +141,7 @@ opacity: 0;
 
 
 .plant-list .plant-card .card-mix img{
-  transform:translateY(100px);
+  transform:translateY(10px);
 transition:0.5s;
 opacity: 0;
 
@@ -139,7 +154,7 @@ opacity: 0;
 
 
 .plant-list .plant-card .card-mix div{
-  transform:translateY(100px);
+  transform:translateY(10px);
 transition:0.5s;
 opacity: 0;
 
@@ -303,7 +318,15 @@ button {
 
 button:hover {
   background: #df2e6c;
+letter-spacing: 3px;
+    
+
+
 }
+
+
+
+
 
 button:active,
 input[type="button"]:active,
@@ -378,257 +401,6 @@ pre {
   border-bottom: 2px solid !important;
 }
 
-/*
-
-
-:root {
-  --foreground-color: rgb(41, 5, 5);
-}
-
-body {
-
-
-  font-family: sans-serif;
-   background-color: #81d4fa; 
-  font-weight: bold;
-  overflow: hidden;
-  
-  background: linear-gradient(322deg, #170422, rgba(186, 74, 255, 0) 70%), linear-gradient(178deg, #100049, rgba(0, 138, 255, 0) 70%), linear-gradient(24deg, #25119921, rgba(33, 136, 114, 0) 35%);
-  color: white;
-  text-transform: uppercase;
-  border: none;
-  font-size: 16px;
-  font-weight: 100;
-}
-
-
-
-
-.container {
-  max-width: 800px;
-  margin: 0 auto;
-  border-bottom: 1px solid #cf0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-h1 {
-  font-weight: 100;
-  color: white;
-  text-align: center;
-  font-size: 2rem;
-}
-
-.cart-badge {
-  position: absolute;
-  top: -8px;
-  right: -8px;
-  border-radius: 50%;
-  background-color: #ec5990;
-  color: #fff;
-  display: inline-block;
-  padding-left: 6px;
-  padding-right: 6px;
-  font-size: 0.6rem;
-  text-align: center;
-}
-
-.plant-list {
-
-  padding-top: 32px;
-  max-width: 1200px;
-  margin: 0 auto;
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: space-evenly;
-    
-          
-}
-
-
-
-
-::-webkit-plant-list{
-  width: 25px;
-}
-
-
-::-webkit-plant-list-track{
-  background:#170422;
-}
-
-
-
-.plant-card {
-  
-  display: flex;
-  width: 50%;
-  padding: 32px 0;
-}
-
-.plant-image {
-  height: 106px;
-}
-
-.plant-details {
-  
-  padding: 0 32px 0 16px;
-  color: #fff;
-  font-weight: 200;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: column nowrap;
-          flex-flow: column nowrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-}
-
-.plant-name {
-  margin-top: 0;
-  margin-bottom: 6px;
-}
-
-.plant-scientific-name {
-  font-style: italic;
-}
-
-.plant-bottom-row {
-  display: flex;
-  margin-top: 16px;
-  align-items: center;
-}
-
-.plant-bottom-row > p {
-  margin-right: 32px;
-}
-
-.plant-button {
-  justify-self: flex-end;
-}
-
-p {
-  margin: 0;
-}
-
-.cart {
-  width: 800px;
-  margin: 0 auto;
-}
-
-.cart > .plant-card {
-  width: 100%;
-  margin: 0 auto;
-  border-bottom: 1px solid #cf0;
-}
-
-.cart .plant-image {
-  height: 160px;
-}
-
-.cart .plant-details {
-  justify-content: center;
-}
-
-.checkout-section {
-  color: #fff;
-  padding: 32px 0;
-  display: flex;
-  flex-flow: column nowrap;
-  align-items: flex-end;
-}
-
-.success-message {
-  width: 400px;
-  margin: 0 auto;
-  margin-top: 32px;
-  padding: 24px;
-  background-color: #199100;
-}
-
-form {
-  background: #81d4fa;
-  max-width: 400px;
-  margin: 0 auto;
-}
-
-input {
-  display: block;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  width: 100%;
-  border-radius: 4px;
-  border: 1px solid white;
-  padding: 10px 15px;
-  margin-bottom: 10px;
-  font-size: 14px;
-}
-
-label {
-  line-height: 2;
-  text-align: left;
-  display: block;
-  margin-bottom: 13px;
-  margin-top: 20px;
-  color: white;
-  font-size: 14px;
-  font-weight: 200;
-}
-
-button {
-  background: linear-gradient(322deg, #ba4aff, rgba(186, 74, 255, 0) 70%), linear-gradient(178deg, #008aff, rgba(0, 138, 255, 0) 70%), linear-gradient(24deg, #00ffc6, rgba(0, 255, 198, 0) 35%);
-  color: white;
-  text-transform: uppercase;
-  border: none;
-  margin-top: 40px;
-  padding: 20px;
-  font-size: 16px;
-  font-weight: 100;
-  cursor: pointer;
-}
-
-/* button:hover {
-    background: #df2e6c;
-  } */
-
-button:active,
-input[type="button"]:active,
-input:active {
-  -webkit-transition: 0.3s all;
-  transition: 0.3s all;
-  -webkit-transform: translateY(3px);
-  transform: translateY(3px);
-  border: 1px solid transparent;
-  opacity: 0.8;
-}
-
-input:disabled {
-  opacity: 0.4;
-}
-
-input[type="button"]:hover {
-  -webkit-transition: 0.3s all;
-  transition: 0.3s all;
-}
-
-button,
-input[type="button"],
-input {
-  -webkit-appearance: none;
-}
 
 .App {
   max-width: 600px;
@@ -664,6 +436,9 @@ pre {
   position: relative;
 }
 
+
+
+/* Top Buttons */
 .btn:link,
 .btn:visited {
   text-transform: uppercase;
@@ -683,45 +458,69 @@ pre {
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
-.btn:active {
-  -webkit-transform: translateY(-1px);
-  transform: translateY(-1px);
-  -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-}
+
 
 .btn-white {
-  background-color: #fff;
+  background-color: rgb(255, 255, 255);
+
+
+
   color: #777;
+  
 }
 
-.btn::after {
-  content: "";
-  display: inline-block;
-  height: 100%;
-  width: 100%;
-  border-radius: 100px;
+
+
+
+
+/* Top Buttons*/
+
+nav .btn{
+
+
+  position: relative;
+}
+
+a{
   position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -1;
-  -webkit-transition: all 0.4s;
-  transition: all 0.4s;
+  background: rgba(255, 255, 255, 0.055);
+box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+border-top: 1px solid rgba(255,255,255, 0.1 );
+border-top: 1px solid rgba(255,255,255, 0.1 );
+
+border-radius: 30px;
+color: #fff;
+z-index:1;
+font-weight:400;
+letter-spacing: 1px;
+text-decoration: none;
+transition: 00.5s;
+
 }
 
-.btn-white::after {
-  background-color: #fff;
+a:hover {
+letter-spacing: 3px;
+
+box-shadow: 0 0 5px #ff1f71;
+
+animation:  none;
+
 }
 
-.btn:hover::after {
-  -webkit-transform: scaleX(1.4) scaleY(1.6);
-  transform: scaleX(1.4) scaleY(1.6);
-  opacity: 0;
+@keyframes glowing {
+  0% {
+    background-color: #c7087e;
+    box-shadow: 0 0 5px #c7087e;
+  }
+  50% {
+    background-color: #ff0080;
+    box-shadow: 0 0 20px #ff0080;
+  }
+  100% {
+    background-color:  #c7087e;
+    box-shadow: 0 0 5px #c7087e;
+  }
 }
-
-.btn-animated {
-  -webkit-animation: moveInBottom 5s ease-out;
-  animation: moveInBottom 5s ease-out;
-  -webkit-animation-fill-mode: backwards;
-  animation-fill-mode: backwards;
+.plant-button{
+  animation: glowing 1300ms infinite;
 }

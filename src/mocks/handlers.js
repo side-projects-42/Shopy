@@ -26,7 +26,7 @@ const plantsData = [
     sizes: ["small"],
     watering: "4.8 Stars",
     description:
-      "Smartphone 11T Pro 16GB 1T Type-C Android 12 Smartphone 10 ",
+      "Smartphone 11T Pro 16GB 1T Type-C Android 12 Smartphone 10. ",
       price: 499.99,
   },
   // {
