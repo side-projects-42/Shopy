@@ -1,9 +1,12 @@
 import React, { Component } from "react";
 import axios from "axios";
-import { Rate } from 'antd';
+import { Rate } from "antd";
 //import { FaTruckMoving} from "react-icons/ai";
+import Tilt from "react-parallax-tilt";
+import { FaTruckMoving } from "react-icons/fa";
+import Title from 'react-vanilla-tilt'
 
-import { FaTruckMoving} from 'react-icons/fa';
+
 
 
 export default class PlantList extends Component {
@@ -13,7 +16,7 @@ export default class PlantList extends Component {
   };
   // when the component mounts:
   //   - fetch data from the server endpoint - http://localhost:3333/plants
-  //   - set the returned plants array to this.state.plants
+  //    <p className="plant-scientific-name">{plant.scientificName}</p>  - set the returned plants array to this.state.plants
 
   /*********  DON'T CHANGE ANYTHING IN THE RENDER FUNCTION *********/
   componentDidMount() {
@@ -27,29 +30,48 @@ export default class PlantList extends Component {
     return (
       <main className="plant-list">
         {this.state?.plants?.map((plant) => (
-          <div className="plant-card" key={plant.id} data-testid="plant-card">
-            <div className="card-mix">
-              <div className="plant-details">
-                <img className="plant-image" src={plant.img} alt={plant.name} />
-                <h2 className="plant-name">{plant.name}</h2>
-                <p className="plant-scientific-name">{plant.scientificName}</p>
-                <p>{plant.description}</p>
-                <div className="plant-bottom-row">
-                  <p>${plant.price}</p>
-                  <Rate allowHalf defaultValue={4.5} className="rate" />
-                  <FaTruckMoving/>
-              
-                  <button
-                  className="plant-button"
-                  onClick={() => this.props.addToCart(plant)}
-                >Buy
-                </button>
+        
+        <Tilt style={{ glare: false }}    >
+        <div  style={{ glareEnable: false  }}   className="plant-card" key={plant.id} data-testid="plant-card">
+         
+              <div         className="card-mix">
+                <div        className="plant-details">
+                  <img
+                    className="plant-image"
+                    src={plant.img}
+                    alt={plant.name}
+                  />
+                  <h2 className="plant-name">{plant.name}</h2>
+                  <p className="price-card">${plant.price}</p>
 
+                  <p>{plant.description}</p>
+
+                  <div className="Free-Shipping">
+                    Free Shipping
+                    <FaTruckMoving />
+                    <div>
+                      <Rate allowHalf defaultValue={4.5} />
+                      {plant.scientificName}
+                    </div>
+                  </div>
+                  <div className="plant-bottom-row">
+                    <button
+                      className="plant-button"
+                      onClick={() => this.props.addToCart(plant)}
+                    >
+                      Buy
+                    </button>
+                  </div>
                 </div>
-                
               </div>
-            </div>
+
+
+
+              
+           
           </div>
+          </Tilt>
+
         ))}
       </main>
     );

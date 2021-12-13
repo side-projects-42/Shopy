@@ -7,30 +7,26 @@ body {
   font-weight: 100;
 }
 
-
-body::before{
-  content:"";
+body::before {
+  content: "";
   position: absolute;
-  top:0;
-  width:100%;
+  top: 0;
+  width: 100%;
   height: 100%;
   background: linear-gradient(#f00, rgba(255, 0, 255, 0.075));
-  clip-path: circle(30% at right 70%)
+  clip-path: circle(30% at right 70%);
 }
 
-body::after
-{
-  content:"";
+body::after {
+  content: "";
   position: absolute;
-  top:0;
-  left:0;
+  top: 0;
+  left: 0;
   width: 100%;
-  height:100%;
+  height: 100%;
   background: linear-gradient(#2196f3, #e91e6227);
-  clip-path: circle(20% at 10% 100%)
+  clip-path: circle(20% at 10% 100%);
 }
-
-
 
 .container {
   max-width: 800px;
@@ -58,10 +54,10 @@ h1 {
   animation: ease-in-out;
   transition: 0.5s;
   animation: ease-in-out;
-
+  border-top: 1px solid rgba(255, 255, 255, 0.178);
+  border-left: 1px solid rgba(255, 255, 255, 0.178);
   backdrop-filter: blur(2px);
   border-radius: 20px;
-
 
   display: flex;
   justify-content: space-evenly;
@@ -83,6 +79,8 @@ h1 {
   text-align: center;
 }
 
+/* Card Description*/
+
 .plant-list {
   padding-top: 32px;
   max-width: 1200px;
@@ -96,12 +94,62 @@ h1 {
 
 .plant-card {
   display: flex;
-  width: 50%;
-margin-top: 20px;
+
+  margin-top: 20px;
   justify-content: row;
   align-items: center;
-  position:relative;
+  position: relative;
 }
+
+.plant-list .plant-card .card-mix{
+
+  transform:translateY(100px);
+transition:0.5s
+}
+
+.plant-list .plant-card {
+  position: relative;
+}
+
+
+.plant-list .plant-card .card-mix p{
+  transform:translateY(100px);
+transition:0.5s;
+opacity: 0;
+
+} 
+
+.plant-list .plant-card .card-mix:hover p{
+  transform:translateY(0px);
+  opacity: 1;
+} 
+
+
+.plant-list .plant-card .card-mix img{
+  transform:translateY(100px);
+transition:0.5s;
+opacity: 0;
+
+} 
+
+.plant-list .plant-card .card-mix:hover img{
+  transform:translateY(0px);
+  opacity: 1;
+} 
+
+
+.plant-list .plant-card .card-mix div{
+  transform:translateY(100px);
+transition:0.5s;
+opacity: 0;
+
+} 
+
+.plant-list .plant-card .card-mix:hover div{
+  transform:translateY(0px);
+  opacity: 1;
+} 
+
 
 .plant-image {
   height: 260px;
@@ -123,24 +171,33 @@ margin-top: 20px;
 
 .plant-name {
   margin-top: 0;
-  margin-bottom: 16px;
+  margin-bottom: 5px;
+  font-style: oblique;
 }
 
 .plant-scientific-name {
   font-style: italic;
 }
 
+.price-card {
+  font-size: 1.5rem;
+}
+
 .plant-bottom-row {
   display: flex;
-  margin-top: 6px;
-  margin-right: 20px;
+  margin-top: -40px;
+  margin-top: -40px;
+  margin-bottom: 540px;
+  margin-left: 270px;
   align-items: center;
+  justify-content: space-around;
 }
 
 .plant-bottom-row > p {
   margin-right: 30px;
   margin-bottom: 20px;
   margin-left: 18px;
+  justify-content: space-around;
 }
 
 .plant-button {
@@ -215,6 +272,11 @@ label {
   font-weight: 200;
 }
 
+.Free-Shipping {
+  margin-top: 20px;
+  color: rgba(208, 255, 0, 0.363);
+}
+
 button {
   background: rgba(255, 255, 255, 0.178);
   border-color: beige;
@@ -223,15 +285,16 @@ button {
   animation: ease-in-out;
   transition: 0.5s;
   animation: ease-in-out;
- backdrop-filter: blur(2px);
+  backdrop-filter: blur(2px);
 
   border: 30px;
-border-radius: 10px;
-width:80px;
-height: 40px;
+  border-radius: 10px;
+  width: 80px;
+  height: 40px;
   text-transform: uppercase;
   border: none;
   margin-top: 10px;
+  margin-left: 10px;
   padding: 11px;
   font-size: 16px;
   font-weight: 10;
@@ -661,11 +724,4 @@ pre {
   animation: moveInBottom 5s ease-out;
   -webkit-animation-fill-mode: backwards;
   animation-fill-mode: backwards;
-}
-
-
-
-
-.rate{
-background-color: blue;
 }

@@ -4,21 +4,21 @@ const plantsData = [
   {
     name: "21 Ultra",
     id: 143,
-    scientificName: "399.99",
+    scientificName: "89,099",
     difficulty: "easy",
     light: "direct",
     img:
       "https://ae01.alicdn.com/kf/H139b50f5699344d0a913806997619d68i/S21-Ultra-Smartphones-Global-Version-Mobile-Phones-Android-10-0-16GB-512GB-Dual-Sim-Smart-Phone.jpg_220x220xz.jpg_.webp",
     sizes: ["small"],
-    watering: 2,
+    watering: "4.8 Stars",
     description:
-      "Global Version S21 Ultra Smartphone 7.3 HD Inch Android 10.0 Mobile Phones 16GB+512GB Cellphones Celular 5G Unlock Smart Phone.",
-    price: 21,
+      "Global Version S21 Ultra Smartphone 7.3 HD Inch Android 10.0 Mobile Phones 16GB+512GB.",
+    price: 399.99,
   },
   {
     name: "11 T Pro",
     id: 125341,
-    scientificName: "$399.99",
+    scientificName: "9,990",
     difficulty: "easy",
     light: "",
     img:
@@ -27,7 +27,7 @@ const plantsData = [
     watering: "4.8 Stars",
     description:
       "Smartphone 11T Pro 16GB 1T Type-C Android 12 Smartphone 10 ",
-
+      price: 499.99,
   },
   // {
   //   name: "Snake Plant",
