@@ -256,7 +256,15 @@ p {
   margin: 0 auto;
   margin-top: 32px;
   padding: 24px;
-  background-color: #cf0;
+  border-radius: 24px;
+    background: rgba(255, 255, 255, 0.178);
+    border-top: 1px solid rgba(255,255,255, 0.1 );
+    border-top: 1px solid rgba(255,255,255, 0.1 );
+
+
+  border-color: beige;
+  box-shadow: 0px 0px 15px -5px;
+  backdrop-filter: blur(2px);
 }
 
 form {
@@ -470,13 +478,18 @@ pre {
 }
 
 
+.Shopy{
+display: flex;
+justify-content: flex-start;
 
+}
 
 
 /* Top Buttons*/
 
 nav .btn{
-
+margin-left: 40px;
+margin-top: 40px;
 
   position: relative;
 }
@@ -501,9 +514,9 @@ transition: 00.5s;
 a:hover {
 letter-spacing: 3px;
 
-box-shadow: 0 0 5px #ff1f71;
+box-shadow: 0 0 5px #ff1f71,
 
-animation:  none;
+
 
 }
 
@@ -523,4 +536,58 @@ animation:  none;
 }
 .plant-button{
   animation: glowing 1300ms infinite;
+}
+
+
+nav{
+display: flex;
+justify-content: row;
+}
+
+
+.homeButton{
+color: #fff;
+width: 40px;
+margin-right:40px ;
+margin-left: 40px ;
+height: 40px;
+}
+
+
+
+.cart-image{
+  margin-top: 70px;
+  height: 200px;
+}
+
+
+.checkout{
+  background-color: green;
+
+  width: 200px;
+}
+
+form{
+  background: rgba(0, 0, 0, 0);
+width: 440px;
+height: 420px;
+margin-left: 40px;
+margin-bottom: 40px;
+
+}
+
+
+label{
+margin-top: -12px;
+}
+
+
+.Thanks {
+font-weight: 700;
+font-size: 60px;
+color:rgba(0, 0, 0, 0.2)  ;
+box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+border-top: 1px solid rgba(255,255,255, 0.1 );
+border-top: 1px solid rgba(255,255,255, 0.1 );
+transform: rotate(25deg)
 }

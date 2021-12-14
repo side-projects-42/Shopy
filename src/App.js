@@ -6,12 +6,9 @@ import ShoppingCart from "./components/ShoppingCart";
 import CheckoutForm from "./components/CheckoutForm";
 import "antd/dist/antd.css";
 import { FaGit, FaGithub, FaGitHub, FaCartPlus } from "react-icons/fa";
-
-
-
+import { AiOutlineHome } from "react-icons/ai";
+import Landing from "./components/Landing"
 import "./App.css";
-
-
 
 function App() {
   // array of plants that have been added to the cart
@@ -28,34 +25,37 @@ function App() {
   };
 
   return (
-    <div className="Shoppy">
-      <Router>       
+    <div className="Shopy">
+      <Router>
+        <NavLink exact to="/">
+          <AiOutlineHome
+            style={{ color: "blue", size: "50px" }}
+            className="homeButton"
+          >
+            <a href="/" className="homeButton">
+              Home
+            </a>
+          </AiOutlineHome>
+        </NavLink>
+
         <nav className="container">
           <div class="text-box">
-            <NavLink exact to="/">
-              <a href="/" class="btn ">
-                click
-              </a>
-            </NavLink>
-          </div>
-
-          <div class="text-box">
             <NavLink to="/cart">
-           
               <a href="/cart" class="btn ">
                 Cart
                 <h3 data-testid="cart-badge2" className="cart-badge">
-                <FaCartPlus className="fa-button-carts "/>
+                  <FaCartPlus className="fa-button-carts " />
                   {cart.length > 0 && cart.length}
                 </h3>
-              </a> 
+              </a>
             </NavLink>
           </div>
 
           <h1>
             Shopy <span role="img"></span>
           </h1>
-          <ul></ul>
+
+    
         </nav>
 
         <Route
@@ -64,24 +64,28 @@ function App() {
           render={() => <PlantList addToCart={addToCart} />}
         />
 
-
         <Route
           path="/cart"
+          
           render={(props) => (
             <ShoppingCart
               {...props}
               cart={cart}
               removeFromCart={removeFromCart}
             />
+
+
+
           )}
         />
         <Route path="/checkout" component={CheckoutForm} />
+
+
+<Route path="/landing" component={Landing} /> 
+
       </Router>
     </div>
   );
 }
 
 export default App;
-
-
-
