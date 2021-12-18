@@ -4,7 +4,7 @@ import { Rate } from "antd";
 //import { FaTruckMoving} from "react-icons/ai";
 import Tilt from "react-parallax-tilt";
 import { FaTruckMoving } from "react-icons/fa";
-import Title from 'react-vanilla-tilt'
+//import Title from 'react-vanilla-tilt'
 
 
 

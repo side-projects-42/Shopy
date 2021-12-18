@@ -1,11 +1,11 @@
-import React, { useEffect, useState } from "react";
+import React, {useState } from "react";
 import { BrowserRouter as Router, Route, NavLink } from "react-router-dom";
-import axios from "axios";
+
 import PlantList from "./components/PlantList";
 import ShoppingCart from "./components/ShoppingCart";
 import CheckoutForm from "./components/CheckoutForm";
 import "antd/dist/antd.css";
-import { FaGit, FaGithub, FaGitHub, FaCartPlus } from "react-icons/fa";
+import {  FaGitHub, FaCartPlus } from "react-icons/fa";
 import { AiOutlineHome } from "react-icons/ai";
 import Landing from "./components/Landing"
 import "./App.css";

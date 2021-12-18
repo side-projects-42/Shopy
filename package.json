@@ -46,6 +46,7 @@
     "jest-watch-typeahead": "0.4.2",
     "mini-css-extract-plugin": "0.9.0",
     "mutationobserver-shim": "^0.3.7",
+    "next": "^12.0.7",
     "node": "^17.2.0",
     "optimize-css-assets-webpack-plugin": "5.0.3",
     "pnp-webpack-plugin": "1.6.4",
@@ -72,6 +73,7 @@
     "style-loader": "0.23.1",
     "terser-webpack-plugin": "2.3.5",
     "ts-pnp": "1.1.6",
+    "urix": "^0.1.0",
     "url-loader": "2.3.0",
     "webpack": "4.42.0",
     "webpack-dev-server": "3.10.3",
@@ -100,7 +102,8 @@
   },
   "devDependencies": {
     "@sheerun/mutationobserver-shim": "^0.3.3",
-    "msw": "^0.21.3"
+    "msw": "^0.21.3",
+    "rollup-plugin-babel": "^4.4.0"
   },
   "jest": {
     "roots": [
