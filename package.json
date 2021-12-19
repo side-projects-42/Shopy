@@ -1,6 +1,11 @@
 {
   "name": "web-sprint-challenge-advanced-react",
   "version": "0.1.0",
+  "eslintConfig": {
+    "env": {
+      "browser": true,
+      "node": true
+    },
   "private": true,
   "dependencies": {
     "@ant-design/icons": "^4.7.0",
