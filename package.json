@@ -82,6 +82,7 @@
   "scripts": {
     "start": "react-scripts --openssl-legacy-provider start",
     "build": "react-scripts --openssl-legacy-provider build",
+      "lint": "next lint",
     "test": "node scripts/test.js"
   },
   "eslintConfig": {
