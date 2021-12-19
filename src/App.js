@@ -11,10 +11,10 @@ import Landing from "./components/Landing"
 import "./App.css";
 
 function App() {
-  // array of plants that have been added to the cart
+ 
   const [cart, setCart] = useState([]);
 
-  // add a plant to the cart
+ 
   const addToCart = (plant) => {
     setCart([...cart, plant]);
   };
