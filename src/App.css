@@ -303,7 +303,7 @@ label {
 button {
   background: rgba(255, 255, 255, 0.178);
   border-color: beige;
-  color: white;
+    color: white;
   box-shadow: 0px 0px 15px -5px;
   transition: 0.3%;
   animation: ease-in-out;
